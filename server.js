@@ -8,7 +8,7 @@ app.use(cors());
 app.use(limiter);
 app.get("/generate", async (req, res) => {
   try {
-    const response = await fetch(https://api.guerrillamail.com/ajax.php?f=get_email_address&ip=127.0.0.1&agent=Mozilla");
+    const response = await fetch("https://api.guerrillamail.com/ajax.php?f=get_email_address&ip=127.0.0.1&agent=Mozilla")
     const data = await response.json();
     res.json(data);
   } catch (error) {
